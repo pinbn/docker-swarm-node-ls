@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  web:
+    image: ghcr.io/pinbn/docker-swarm-node-ls
+    build:
+      context: .
+    restart: always
+    deploy:
+      replicas: 1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "1355:80"
