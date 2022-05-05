@@ -1,6 +1,6 @@
 <?php
 $result = null;
-exec('/usr/bin/docker node ls', $result);
+exec('/usr/local/bin/docker node ls', $result);
 $ok = true;
 foreach($result as $line) {
     if (stripos($line,"DOWN") === true) {
