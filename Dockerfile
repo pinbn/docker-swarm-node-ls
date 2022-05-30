@@ -9,7 +9,7 @@ COPY ./index.php /app/html/
 # docker run --rm -it -p 1355:80 -v /var/run/docker.sock:/var/run/docker.sock dtc-dkr.corp.shufflingmadness.com:9443/docker-swarm-node-ls
 
 RUN apk update && \
-    apk add supervisor nginx php7-fpm dos2unix curl && \
+    apk add supervisor nginx php8-fpm dos2unix curl && \
     dos2unix /app/* && \
     apk del dos2unix && \
     rm -rf /var/cache/apk/*
